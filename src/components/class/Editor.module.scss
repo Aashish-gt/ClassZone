@@ -1,0 +1,149 @@
+@mixin spinner($border-width, $type) {
+  display: block;
+
+  &::after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: $border-width solid #008d7d;
+    border-color: #008d7d transparent #008d7d transparent;
+    animation: spinner 1s linear infinite;
+  }
+
+  @if $type == "one" {
+    width: 50px;
+    height: 50px;
+    margin: 1rem auto;
+
+    @media screen and (max-width: 1024px) {
+      width: 35px;
+    }
+  } @else {
+    width: 100%;
+    height: 100%;
+  }
+
+  @content;
+}
+
+.class__announce {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 1px 6px -2px black;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  height: 4.5rem;
+  cursor: pointer;
+
+  @media screen and (max-width: 560px) {
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+
+  img {
+    height: 3.1rem;
+    width: 3.1rem;
+    object-fit: cover;
+    border-radius: 50%;
+
+    @media screen and (max-width: 560px) {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  input {
+    border: none;
+    padding: 1rem 1.2rem;
+    width: 100%;
+    font-size: 1rem;
+    outline: none;
+    font-size: clamp(14px, 3.5vw, 20px);
+  }
+}
+
+.editor {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 1px 6px -2px black;
+  border-radius: 0.5rem;
+  word-break: break-all;
+
+  .actions {
+    display: flex;
+    flex-direction: row-reverse;
+
+    button {
+      padding: 0.5rem;
+      height: 2rem;
+      width: 4rem;
+      margin: 1rem;
+      border-radius: 0.4rem;
+      color: #0a9689;
+      font-weight: bolder;
+      align-items: center;
+
+      @media screen and (max-width: 980px) {
+        margin: 0.5rem;
+      }
+
+      &:nth-child(1):enabled {
+        &:nth-child(1):hover {
+          background-color: #0eac9c;
+          color: white;
+        }
+      }
+
+      &:nth-child(1):disabled {
+        background-color: whitesmoke;
+        cursor: default !important;
+      }
+
+      &:nth-child(2) {
+        background-color: white;
+      }
+
+      &:nth-child(2):hover {
+        background-color: whitesmoke;
+      }
+    }
+  }
+}
+
+.spinner_one {
+  @include spinner(5px, "one") {
+    margin-top: 2rem;
+    &::after {
+      width: 50px;
+      height: 50px;
+
+      @media screen and (max-width: 1024px) {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+
+.spinner_two {
+  @include spinner(3px, "two") {
+    &::after {
+      margin: auto;
+      width: 11px;
+      height: 11px;
+    }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

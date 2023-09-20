@@ -1,0 +1,9 @@
+.wrapper {
+  height: calc(100vh - 55px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 980px) {
+    grid-template-columns: 1fr;
+  }
+}

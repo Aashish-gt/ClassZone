@@ -1,0 +1,133 @@
+.class {
+  width: 75%;
+  margin: auto;
+
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+  }
+}
+
+.class__nameBox {
+  width: 100%;
+  color: white;
+  height: 15rem;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 2rem 2rem 1rem 2rem;
+  font-weight: bold;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem 1rem 0.5rem 1rem !important;
+  }
+
+  @media screen and (max-width: 560px) {
+    height: 8rem;
+  }
+
+  .class__name {
+    font-size: clamp(26px, 4vw, 44px);
+  }
+
+  .class__batch {
+    font-size: clamp(18px, 2.5vw, 28px);
+  }
+}
+
+.container {
+  display: flex;
+
+  .copy_code_container {
+    height: max-content;
+    width: 18.5rem;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.7rem;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h3 {
+      color: rgb(86, 85, 85);
+      font-size: 0.9rem;
+    }
+
+    .class_code {
+      margin: 0.2rem 0;
+      font-size: 1rem;
+      text-align: left;
+      color: #0a9689;
+    }
+
+    @media screen and (max-width: 880px) {
+      display: none;
+    }
+  }
+
+  .classes__upcoming {
+    height: 6rem;
+    width: 18.5rem;
+    border: 1px solid lightgray;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.6rem;
+
+    h4 {
+      font-size: 1rem;
+    }
+
+    p {
+      margin: 0.2rem 0 0.4rem;
+      font-size: 0.9rem;
+      text-align: left;
+      color: #0a9689;
+    }
+
+    .viewAllContainer {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .viewAll {
+        text-align: center;
+        padding: 0.3rem;
+        border-radius: 5px;
+        font-size: 0.9rem;
+      }
+
+      .viewAll:hover {
+        background-color: whitesmoke;
+      }
+    }
+
+    @media screen and (max-width: 880px) {
+      display: none;
+    }
+  }
+
+  .no_announcement_found_text {
+    margin: 1.5rem auto;
+    font-size: clamp(18px, 3vw, 24px);
+    text-align: center;
+    font-weight: 400;
+  }
+
+  .announcementContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}

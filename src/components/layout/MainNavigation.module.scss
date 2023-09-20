@@ -1,0 +1,109 @@
+.wrapper {
+  position: relative;
+
+  .navbar {
+    height: 55px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 5px;
+    background-color: white;
+    color: black;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    .container_one {
+      display: flex;
+      align-items: center;
+
+      .sidebarBtn {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.14);
+          border-radius: 50%;
+        }
+
+        svg {
+          height: 30px;
+          width: 30px;
+        }
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 8px;
+        gap: 5px;
+
+        a {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .logo_text {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 540px) {
+          display: none;
+        }
+      }
+    }
+
+    .container_two {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      .addBtn {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        cursor: pointer;
+
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        border-radius: 10px;
+        z-index: 100;
+        background-color: white;
+        right: 0;
+        width: 10rem;
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+        ul {
+          list-style: none;
+          padding: 0.2rem;
+          margin-top: 0;
+        }
+        li {
+          padding: 12px 12px;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        li:hover {
+          background-color: rgba(0, 0, 0, 0.14);
+        }
+      }
+    }
+  }
+}

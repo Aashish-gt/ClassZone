@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap");
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Noto Sans", "Roboto";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.ReactVirtualized__Grid::-webkit-scrollbar {
+  background-color: rgb(233, 231, 231);
+  border-radius: 10px;
+  width: 5px;
+}
+
+.ReactVirtualized__Grid::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #2fc251;
+}
+
+.react-responsive-modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-responsive-modal-modal {
+  &::-webkit-scrollbar {
+    border-radius: 10px;
+    background-color: #d2edeb;
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #0a9689;
+  }
+}
+
+&::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background: #0a9689;
+}
+
+&::-webkit-scrollbar {
+  background-color: #bee0dc;
+  width: 8px;
+}
